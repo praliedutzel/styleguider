@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=egde" />
+    <title>Style Guider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Include Your Website's Main CSS -->
+    <link rel="stylesheet" href="demo files/css/global.css" media="screen">
+
+    <!-- Include the StyleGuider CSS -->
+    <link rel="stylesheet" href="styleguider.min.css" media="screen">
+
+    <!-- Include Prism's CSS (if using) -->
+    <link rel="stylesheet" href="demo files/css/prism.css" media="screen">
+  
+    <!--[if IE]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  
+  <body>
+
+    <!-- Write your style guide within the guide-wrapper -->
+    <div class="guide-wrapper">
+      <section>
+        <h1>Project Style Guide</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </section>
+
+      <section>
+        <h2>Typography</h2>
+<div class="code-wrapper" data-code="markup">
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+</div>
+      </section>
+
+      <section>
+        <h2>Color Palette</h2>
+        <div class="clearfix">
+          <div class="color-palette"><span></span></div>
+          <div class="color-palette"><span></span></div>
+          <div class="color-palette"><span></span></div>
+          <div class="color-palette"><span></span></div>
+        </div>
+      </section>
+   
+      <section>
+        <h2>Buttons</h2>
+<div class="code-wrapper" data-code="markup">
+<button class="button">Button</button>
+<button class="button success">Success Button</button>
+</div>
+        <h3>Ghost Button</h3>
+<div class="code-wrapper" data-code="markup">
+<button class="ghost">Boo!</button>
+</div>
+      </section>
+    </div> <!-- /.guide-wrapper -->
+
+    <footer id="styleguider">
+      <p>Created using the <a href="https://github.com/praliedutzel/styleguider" target="blank">StyleGuider</a></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <!-- Include the Prism (if using) and StyleGuider Scripts -->
+    <script src="demo files/js/prism.js"></script>
+    <script src="jquery.styleGuider.min.js"></script>
+
+    <!-- Include Your Website's Scripts -->
+    <!-- <script src="js/script.js"></script> -->
+
+    <!-- Initialize the StyleGuider -->
+    <script>
+      $('body').styleGuider();
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,53 @@
+/*
+    StyleGuider Demo
+    ===============================
+    Author: Pralie Dutzel
+    Website: praliedutzel.com
+*/
+
+
+/*-------------------------------------------------------------------------------*/
+/*---NORMALIZE & IMPORTS---------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+@import "normalize";
+@import "variables";
+@import "mixins";
+
+*, *:before, *:after { @extend %border-box; }
+
+
+
+/*-------------------------------------------------------------------------------*/
+/*---GLOBAL STYLES---------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+body {
+  background-color: #ccc;
+  margin: 0;
+  padding: 0;
+  color: #000;
+  font-family: $body-font;
+  font-size: 100%;
+  font-weight: normal;
+  line-height: 1.5em;
+}
+
+a { outline: none; }
+pre + h3 { margin-top: 3em; }
+
+.button { @include button($mat-lt-blue, #fff); }
+.button.success { @include button($mat-lt-green, #fff); }
+.ghost { @include ghost-button($mat-cyan, #fff); }
+
+
+
+/*-------------------------------------------------------------------------------*/
+/*---MISC------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+@include selection {
+  background-color: $mat-cyan;
+  color: #fff;
+}
+

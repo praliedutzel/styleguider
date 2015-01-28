@@ -1,0 +1,162 @@
+//-------------------------------------------------------------------------------//
+//    The StyleGuider Theme
+//    =======================================
+//    Edit the styles below to customize your style guide.
+//    Please note that since you are referencing your site's main
+//    stylesheet, you may need to override some styles here to
+//    get your style guide to look the way you want.
+//-------------------------------------------------------------------------------//
+
+
+// Import any commonly used variables
+@import "variables";
+
+
+// The color list below is used to generate your custom color palette,
+// where each color is separated by a comma. You can include as many
+// colors as your stylesheets feature; just make sure you have the
+// same number of .color-palette divs in the HTML.
+$color-list: $mat-lt-blue, $mat-cyan, $mat-teal, $mat-lt-green;
+
+
+// Reset styles applied to the body tag
+body { background: #e6eaec; }
+
+
+// Simple clearfix to clear floats and maintain layout flow
+// Delete if you already have this in your own CSS
+.clearfix:before, .clearfix:after {
+  content: '';
+  display: table;
+}
+.clearfix:after { clear: both; }
+
+
+// StyleGuider Variables
+$sg-lt-grey: #cacaca;
+$sg-dk-grey: #404243;
+
+
+
+//-------------------------------------------------------------------------------//
+//---GENERATED NAVIGATION--------------------------------------------------------//
+//-------------------------------------------------------------------------------//
+
+// Styles for the generated navigation
+nav#toc {
+  background-color: $sg-dk-grey;
+  width: 280px;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1em;
+  position: fixed;
+  display: none;
+  z-index: 9999;
+
+  @media screen and (min-width: 64em) { display: block; }
+
+  h5 {
+    margin: 0;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+    color: #fff;
+    font-size: 1em;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  a {
+    margin-top: 0.85em;
+    display: block;
+    color: $sg-lt-grey;
+    font-size: 0.85em;
+    text-decoration: none;
+    text-align: left;
+  }
+}
+
+
+
+//-------------------------------------------------------------------------------//
+//---GENERAL GUIDE STYLES--------------------------------------------------------//
+//-------------------------------------------------------------------------------//
+
+// The guide wrapper is the element that contains all of the style guide elements
+.guide-wrapper {
+  padding: 2em;
+  color: #000;
+  text-align: left;
+}
+@media screen and (min-width: 64em) {
+  .guide-wrapper.navOpen { margin-left: 280px; }
+}
+
+
+// Each block in the style guide is a section
+section {
+  background-color: #fff;
+  padding: 1em;
+  border-radius: 8px;
+}
+section + section { margin-top: 2em; }
+
+
+// The following function is used for the color palettes when displaying the
+// hex code over the color. It detects the lightness of the background color,
+// and adjusts the font to either black or white as appropriate.
+@function set-text-color($color) {
+  @if (lightness($color) > 50) {
+    @return #000;
+  }
+  @else {
+    @return #fff;
+  }
+}
+
+// For each color in your color palette, include a div with the "color-palette"
+// class. As long as you defined the color-list variable at the top of this
+// file, it will automatically generate the specified background colors. The
+// hex value that can be copied is generated using the plugin into the span.
+.color-palette {
+  width: 150px;
+  height: 150px;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  position: relative;
+  float: left;
+  text-align: center;
+
+  @for $i from 1 through length($color-list) {
+    $color: nth($color-list, $i);
+    &:nth-of-type(#{$i}) {
+      background-color: $color;
+      color: set-text-color($color);    
+    }
+  }
+
+  span {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+  }
+}
+
+
+footer#styleguider {
+  padding: 0.5em 2em;
+  text-align: right;
+
+  p {
+    margin: 0;
+    color: $sg-dk-grey;
+    font-size: 0.75em;
+    font-style: italic;
+  }
+
+  a { color: $sg-dk-grey; }
+}
