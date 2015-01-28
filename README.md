@@ -28,7 +28,7 @@ Once you have everything you need setup, you can initialize the StyleGuider like
 ```
 
 ### Optional Syntax Highlighting
-Since the StyleGuider features code blocks, it's recommended to include a syntax highlighter such as [Prism](http://prismjs.com/). The demo is using Prism with the Okaidia theme. If not using a syntax highlighter, you will need to include your own styles for the `&lt;pre&gt;` and `&lt;code&gt;` tags.
+Since the StyleGuider features code blocks, it's recommended to include a syntax highlighter such as [Prism](http://prismjs.com/). The demo is using Prism with the Okaidia theme. If not using a syntax highlighter, you will need to include your own styles for the `<pre>` and `<code>` tags.
 
 ## Plugin Options
 There are several ways to customize the StyleGuider on itit:
@@ -78,7 +78,7 @@ h1 { font-size: 3em; text-align: left; }
 Feel free to customize the StarterGuide's CSS to achieve the proper look and feel for your style guide.
 
 ## Example Code
-The following is a code snippet taken from the demo files to show how you would add sections to your style guide HTML. Any content that should be included in the style guide should be inside a `.guide-wrapper`, with each section of varying content broken up into `&lt;section&gt;` tags. The default settings look for the `section > h2` and generate the sidebar navigation based on those. In order to create the code block, the plugin will look for the `.code-wrapper` class, and will generate a code block for the contents inside. If the `.code-wrapper` has a `data-code`, it will apply the syntax highlighting for the specified language. In the example below, the `data-code` is set to `markup`, which uses Prism's HTML syntax highlighting.
+The following is a code snippet taken from the demo files to show how you would add sections to your style guide HTML. Any content that should be included in the style guide should be inside a `.guide-wrapper`, with each section of varying content broken up into `<section>` tags. The default settings look for the `section > h2` and generate the sidebar navigation based on those. In order to create the code block, the plugin will look for the `.code-wrapper` class, and will generate a code block for the contents inside. If the `.code-wrapper` has a `data-code`, it will apply the syntax highlighting for the specified language. In the example below, the `data-code` is set to `markup`, which uses Prism's HTML syntax highlighting.
 
 ```html
 <div class="guide-wrapper">
