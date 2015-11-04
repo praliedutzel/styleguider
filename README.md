@@ -95,6 +95,6 @@ The following is a code snippet taken from the demo files to show how you would 
 > It's important to note that the `.code-wrapper` and its contents are not indented. Any indents will be shown in the code block, so you will want to flush everything to the left, and indent from there.
 
 ## Questions? Comments? Issues?
-You can use the Issues tab to the right to leave questions, bug lists, or feature requests. You can also tweet any comments at [@kaocleyra](http://twitter.com/kaocleyra). Thanks for checking this out!
+You can use the Issues tab to the right to leave questions, bug lists, or feature requests. You can also tweet any comments at [@praliedutzel](http://twitter.com/praliedutzel). Thanks for checking this out!
 
 > Current stable build: v1.0
